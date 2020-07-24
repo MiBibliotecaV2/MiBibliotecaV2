@@ -8,13 +8,14 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="splash">Logo</string>
+    <string name="title_login"><i>Login</i></string>
     <string name="datos">Datos de acceso</string>
     <string name="imagen_login">Imagen usuario</string>
     <string name="correo_login">Correo Electrónico</string>
     <string name="contrasena_login">Contraseña</string>
     <string name="ingresar_login">Ingresar</string>
     <string name="login_registro"><u>Registro</u></string>
-    <string name="titulo_registro">Registro</string>
+    <string name="titulo_registro" position="center">Registro</string>
     <string name="nombre_reg">Nombre de usuario</string>
     <string name="correo_reg">Correo</string>
     <string name="numero_reg">Teléfono Móvil</string>
@@ -73,4 +74,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="info_bibliotecas">En este sección se indica información relevante de la biblioteca seleccionada</string>
     <string name="ubicacion_mapa">En esta sección, se carga un mapa con la ubicación de la biblioteca</string>
+    <!--    paquete de strings generados para el login con google-->
+
+
 </resources>

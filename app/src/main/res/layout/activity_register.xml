@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:orientation="vertical"
-        tools:context=".RegisterActivity">
+        tools:context=".registro.RegisterActivity">
 
         <TextView
             android:id="@+id/TV_registro"

@@ -1,4 +1,4 @@
-package com.example.mibibliotecav2
+package com.example.mibibliotecav2.registro
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.mibibliotecav2.R
 import com.example.mibibliotecav2.model.remote.UsersRemote
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -27,6 +28,8 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
+
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
 

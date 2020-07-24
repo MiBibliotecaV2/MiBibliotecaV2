@@ -16,7 +16,10 @@
             android:name=".BibliotecasActivity"
             android:label="@string/title_activity_bibliotecas"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".RegisterActivity" />
+        <activity
+            android:name=".registro.RegisterActivity"
+            android:label="@string/titulo_registro"
+            android:parentActivityName=".login.LoginActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +27,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:label="@string/title_login" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

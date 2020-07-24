@@ -1,9 +1,12 @@
-package com.example.mibibliotecav2
+package com.example.mibibliotecav2.login
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.mibibliotecav2.MainActivity
+import com.example.mibibliotecav2.R
+import com.example.mibibliotecav2.registro.RegisterActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 import java.util.regex.Pattern
