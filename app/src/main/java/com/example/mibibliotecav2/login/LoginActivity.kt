@@ -31,7 +31,6 @@ class LoginActivity : AppCompatActivity() {
 
     val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
 
-    //private lateinit var gso : GoogleSignInOptions
     private lateinit var mGoogleSignInClient: GoogleSignInClient
     private val RC_SIGN_IN = 1234
     private lateinit var callbackManager: CallbackManager
