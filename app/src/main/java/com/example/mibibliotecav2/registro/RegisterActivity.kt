@@ -29,13 +29,11 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
 
         BT_examinar_reg.setOnClickListener {
-/*            Toast.makeText(this, "Imagen subida", Toast.LENGTH_SHORT).show()
-            BT_examinar_reg.text = "Cargada"*/
             dispatchTakePictureIntent()
         }
 
@@ -85,7 +83,7 @@ class RegisterActivity : AppCompatActivity() {
                                 )
                                 onBackPressed()
                             } else {
-                                var errorfirebase: String = task.exception!!.message.toString()
+                                val errorfirebase: String = task.exception!!.message.toString()
                                 when (errorfirebase) {
                                     "The email address is already in use by another account." ->
                                         Toast.makeText(
@@ -174,8 +172,6 @@ class RegisterActivity : AppCompatActivity() {
                 myRef.child(id).setValue(usuario)
 
             } else {
-                // Handle failures
-                // ...
             }
         }
     }
