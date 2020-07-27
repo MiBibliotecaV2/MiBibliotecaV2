@@ -14,6 +14,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.mibibliotecav2.login.LoginActivity
+import com.facebook.login.LoginManager
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -21,6 +22,7 @@ import com.google.firebase.auth.FirebaseUser
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
+    private val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,13 +45,11 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
         val user: FirebaseUser? = mAuth.currentUser
         val headerView = navView.getHeaderView(0)
         //val navUsername = headerView.findViewById<TextView>(R.id.TV_usuario)
         val navEmail = headerView.findViewById<TextView>(R.id.TV_email)
-        //navUsername.text = usuario
-        navEmail.text = user!!.email
+        navEmail.text = user?.email
 
     }
 
@@ -61,12 +61,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.MO_cerrar_sesion) {
-            val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
             mAuth.signOut()
+            LoginManager.getInstance().logOut()
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
-        return super.onOptionsItemSelected(item)
+        return true
     }
 
     override fun onSupportNavigateUp(): Boolean {

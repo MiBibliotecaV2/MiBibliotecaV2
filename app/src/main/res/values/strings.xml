@@ -67,7 +67,6 @@
     <string name="usuario_drawer">Mi Biblioteca</string>
     <string name="cerrar_sesion">Cerrar Sesión</string>
     <string name="imagen_facebook">ingreso con facebook</string>
-    <string name="imagen_gmail">ingreso con gmail</string>
     <string name="bibliotecauno">Ir a la primera biblioteca</string>
     <string name="title_activity_bibliotecas">BibliotecasActivity</string>
     <string name="zonadebibliotecas">Zona de Bibliotecas</string>
@@ -75,6 +74,7 @@
     <string name="info_bibliotecas">En este sección se indica información relevante de la biblioteca seleccionada</string>
     <string name="ubicacion_mapa">En esta sección, se carga un mapa con la ubicación de la biblioteca</string>
     <!--    paquete de strings generados para el login con google-->
+    <string name="facebook_app_id">892286074599719</string>
 
 
 </resources>
